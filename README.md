@@ -1,16 +1,11 @@
-<<<<<<< HEAD
-# React + Vite
+To Run 
+1-Clone this repositary
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+2- Install All necessary npm packages listed in package.json
+3-create  a file name .env in Server folder and create variable slike MONGO_URL='your mongodb url'
+PORT= 5000
+SECRET_KEY="your secret key"
 
-Currently, two official plugins are available:
+4-Run you backend by going into Server folder and start node by typing node server.js
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-=======
-# React-Node
->>>>>>> 5ff48d62c4a56e94aeef07956f22a548e9ca255b
+5- Run your Frontend by Entering npm run dev command
