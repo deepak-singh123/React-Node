@@ -9,3 +9,6 @@ SECRET_KEY="your secret key"
 4-Run you backend by going into Server folder and start node by typing node server.js
 
 5- Run your Frontend by Entering npm run dev command
+
+
+Also the live working link  of the project is --https://rectnodeauth.netlify.app/
