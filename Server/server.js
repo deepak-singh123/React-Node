@@ -5,13 +5,13 @@ import dotenv from "dotenv";
 import jwt from "jsonwebtoken"
 import cookieParser from "cookie-parser";
 import cors from "cors";
-import { User } from "./Models/user.js";
 import bcrypt from "bcrypt";
+import { User } from "./Models/User.js";
 dotenv.config();
 
 const app = express();
 app.use(cors({
-    origin: ["http://localhost:5173", "https://bondifyy.netlify.app"],
+    origin: ["http://localhost:5173"],
     credentials: true,
 }));
 app.use(express.json());
@@ -72,7 +72,14 @@ app.post("/user/login",async (req,res)=>{
         const payload = { name:founduser.name, email: founduser.email };
         const token = jwt.sign(payload, process.env.SECRET_KEY, { expiresIn: "10h" });
        
-      
+        res.cookie("authToken", token, {
+            httpOnly: true,
+            maxAge: 3600000 * 5,
+            secure: false,           
+            sameSite: "Lax",         
+          });
+          
+
       res.status(200).json({
   User_details:{name:founduser.name,
   dob:founduser.dob,
@@ -90,6 +97,17 @@ app.post("/user/login",async (req,res)=>{
         res.status(500).json({ message: "An error occurred on the server." });
     }
 
+})
+
+app.get("/user/data",async(req,res)=>{
+    try{
+        const users = await User.find({},"-password");
+        res.status(200).json(users);
+    }
+    catch(e){
+        console.log(e);
+        res.status(500).json("Error ",e);
+    }
 })
 
 mongoose.connect(process.env.MONGO_URL, {
