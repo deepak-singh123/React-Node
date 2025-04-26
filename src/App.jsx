@@ -14,7 +14,7 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("http://localhost:5000/user/data", {
+        const response = await fetch("https://react-node-sqgq.onrender.com/user/data", {
           method: "GET",
           credentials: "include"
         });
