@@ -110,9 +110,8 @@ app.get("/user/data",async(req,res)=>{
     }
 })
 
-mongoose.connect(process.env.MONGO_URL, {
-    dbName: "QUANTOM",
-}).then(() => console.log("Database connected on port",process.env.port))
+mongoose.connect(process.env.MONGO_URL)
+    .then(() => console.log("Database connected on port",process.env.port))
   .catch((e) => console.log("Database connection error:", e));
 
 
