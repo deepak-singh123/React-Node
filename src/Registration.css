@@ -1,56 +1,96 @@
-.form-container {
-    max-width: 400px;
-    margin: 50px auto;
-    padding: 20px;
-    border: 2px solid #ccc;
-    border-radius: 12px;
-    background-color: #f9f9f9;
-    font-family: Arial, sans-serif;
+/* Register.css */
+
+.register-container {
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(to bottom, #0fd8d0, #075e74);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.register-card {
+  background-color: #1e2a38;
+  border-radius: 5px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  width: 400px;
+  padding: 2rem;
+  text-align: center;
+}
+
+.register-title {
+  color: cyan;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+}
+
+.register-form {
+  width: 100%;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  background: #39495c;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+}
+
+.input-group i {
+  color: white;
+  margin-right: 10px;
+}
+
+.input-group input {
+  border: none;
+  outline: none;
+  background: none;
+  color: white;
+  width: 100%;
+}
+
+input::placeholder {
+  color: white;
+}
+
+.register-btn {
+  width: 100%;
+  background-color: #00f7e5;
+  color: grey;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin-top: 1rem;
+}
+
+.register-btn:hover {
+  background-color: #00d2c5;
+}
+
+.register-success {
+  color: #00f7e5;
+  margin-top: 1rem;
+  font-size: 1rem;
+}
+
+/* Responsive */
+
+@media (max-width: 500px) {
+  .register-card {
+    width: 90%;
+    padding: 1.5rem;
   }
-  
-  h2 {
-    text-align: center;
-    color: #333;
+
+  .register-title {
+    font-size: 1.5rem;
   }
-  
-  .form-group {
-    margin-bottom: 15px;
-  }
-  
-  label {
-    display: block;
-    margin-bottom: 6px;
-    font-weight: bold;
-    color: #555;
-  }
-  
-  input {
-    width: 100%;
-    padding: 8px 10px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    box-sizing: border-box;
-  }
-  
-  button {
-    width: 100%;
+
+  .register-btn {
+    font-size: 1rem;
     padding: 10px;
-    background-color: #0066cc;
-    color: white;
-    font-size: 16px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
   }
-  
-  button:hover {
-    background-color: #004999;
-  }
-  
-  .success-message {
-    margin-top: 20px;
-    color: green;
-    font-weight: bold;
-    text-align: center;
-  }
-  
+}

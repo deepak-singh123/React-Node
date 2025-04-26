@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import './Registration.css'; 
-
+import { useNavigate } from 'react-router-dom';
 const Register = () => {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     name: '',
     dob: '',
@@ -38,75 +39,89 @@ const Register = () => {
         },
         body: JSON.stringify(formData)    
         })
-
+      
+        if(response.ok){
       const result = await response.json();
       console.log("result=",result);
+      setSubmitted(true);
+          navigate("/login")
+        }
+
     }
     catch(error){
       console.error("error during registration",error);
     }
 
-    setSubmitted(true);
   };
 
   return (
-    <div className="form-container">
-      <h2>Registration Form</h2>
-      <form onSubmit={handleSubmit}>
-        <div className="form-group">
-          <label>Name:</label>
-          <input
-            type="text"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-            required
-          />
-        </div>
+    <div className="register-container">
+      <div className="register-card">
+        <h2 className="register-title">Register</h2>
+        <form onSubmit={handleSubmit} className="register-form">
+          <div className="input-group">
+            <i className="fa-solid fa-user"></i>
+            <span style={{ color: "white", margin: "0 8px" }}>|</span>
+            <input
+              type="text"
+              name="name"
+              placeholder="Name"
+              value={formData.name}
+              onChange={handleChange}
+              required
+            />
+          </div>
 
-        <div className="form-group">
-          <label>Date of Birth:</label>
-          <input
-            type="date"
-            name="dob"
-            value={formData.dob}
-            onChange={handleChange}
-            required
-          />
-        </div>
+          <div className="input-group">
+            <i className="fa-solid fa-calendar"></i>
+            <span style={{ color: "white", margin: "0 8px" }}>|</span>
+            <input
+              type="date"
+              name="dob"
+              value={formData.dob}
+              onChange={handleChange}
+              required
+            />
+          </div>
 
-        <div className="form-group">
-          <label>Email:</label>
-          <input
-            type="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            required
-          />
-        </div>
+          <div className="input-group">
+            <i className="fa-solid fa-envelope"></i>
+            <span style={{ color: "white", margin: "0 8px" }}>|</span>
+            <input
+              type="email"
+              name="email"
+              placeholder="Email"
+              value={formData.email}
+              onChange={handleChange}
+              required
+            />
+          </div>
 
-        <div className="form-group">
-          <label>Password:</label>
-          <input
-            type="password"
-            name="password"
-            value={formData.password}
-            onChange={handleChange}
-            required
-          />
-        </div>
+          <div className="input-group">
+            <i className="fa-solid fa-lock"></i>
+            <span style={{ color: "white", margin: "0 8px" }}>|</span>
+            <input
+              type="password"
+              name="password"
+              placeholder="Password"
+              value={formData.password}
+              onChange={handleChange}
+              required
+            />
+          </div>
 
-        <button type="submit">Register</button>
-      </form>
+          <button type="submit" className="register-btn">REGISTER</button>
+        </form>
 
-      {submitted && (
-        <div className="success-message">
-          Registration Successful!
-        </div>
-      )}
+        {submitted && (
+          <div className="register-success">
+            Registration Successful! 
+          </div>
+        )}
+      </div>
     </div>
   );
+
 };
 
 export default Register;

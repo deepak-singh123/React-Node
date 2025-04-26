@@ -1,0 +1,98 @@
+/* Home.css */
+
+.home-container {
+    padding: 2rem;
+  }
+  
+  .home-title {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    color: #333;
+  }
+  
+  .table-container {
+    overflow-x: auto;
+    max-height: 500px;
+
+  }
+  
+  .user-table {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    min-width: 600px;
+  }
+  
+  .user-table thead {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  .user-table th, 
+  .user-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .user-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .no-users {
+    text-align: center;
+    padding: 1rem;
+    color: #888;
+  }
+  
+  .logout-button-container {
+    text-align: center;
+    margin-top: 2rem;
+  }
+  
+  .logout-button {
+    background-color: #dc3545;
+    color: #fff;
+    padding: 0.7rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .logout-button:hover {
+    background-color: #c82333;
+  }
+  
+  @media (max-width: 768px) {
+    .home-container {
+      padding: 1rem;
+    }
+  
+    .home-title {
+      font-size: 1.5rem;
+    }
+  
+    .user-table {
+      min-width: 500px; 
+    }
+  
+    .logout-button {
+      width: 100%;
+      padding: 1rem;
+      font-size: 1.2rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .home-title {
+      font-size: 1.2rem;
+    }
+  
+    .logout-button {
+      font-size: 1rem;
+    }
+  }
+  

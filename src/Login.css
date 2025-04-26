@@ -129,7 +129,7 @@ input::placeholder{
 .login-btn {
   width: 100%;
   background-color: #00f7e5;
-  color: black;
+  color: grey;
   padding: 12px;
   border: none;
   border-radius: 5px;
@@ -137,7 +137,6 @@ input::placeholder{
   cursor: pointer;
   transition: background 0.3s ease;
 }
-
 .login-btn:hover {
   background-color: #00d2c5;
 }

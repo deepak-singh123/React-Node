@@ -61,7 +61,7 @@ const Login = () => {
     <div className="login-container">
       <div className="login-card">
        <div className='signin-btn'>
-         <button className="login-title" onClick={()=>handlesignin()}>SIGN IN</button>
+         <button className="login-title" onClick={()=>handlesignin()}>SIGN UP</button>
        </div>
         <div className="profile-pic"></div>
         <div className='form-box'>
