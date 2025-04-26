@@ -10,7 +10,7 @@ import ProtectedRoute from './ProtectedRoute'
 
 
 function App() {
-  useEffect(()=>{
+ /* useEffect(()=>{
     try{
       const response = fetch("http://localhost:5000/user/data",{
         method:"GET",
@@ -26,7 +26,7 @@ function App() {
       console.log(e);
     }
   },[])
-
+*/
 
   return (
     <>

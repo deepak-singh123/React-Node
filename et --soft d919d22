@@ -1,0 +1,15 @@
+[33m71600ea[m[33m ([m[1;36mHEAD -> [m[1;32mrecovered-code[m[33m)[m HEAD@{0}: reset: moving to 71600ea
+[33m50dbc8b[m[33m ([m[1;31morigin/main[m[33m, [m[1;32mmain[m[33m)[m HEAD@{1}: checkout: moving from main to recovered-code
+[33m50dbc8b[m[33m ([m[1;31morigin/main[m[33m, [m[1;32mmain[m[33m)[m HEAD@{2}: pull origin main --rebase: Fast-forward
+[33md919d22[m HEAD@{3}: rebase (abort): returning to refs/heads/main
+[33md919d22[m HEAD@{4}: rebase (abort): returning to refs/heads/main
+[33m71600ea[m[33m ([m[1;36mHEAD -> [m[1;32mrecovered-code[m[33m)[m HEAD@{5}: commit: added login form
+[33md919d22[m HEAD@{6}: rebase (abort): returning to refs/heads/main
+[33md919d22[m HEAD@{7}: rebase (abort): returning to refs/heads/main
+[33md919d22[m HEAD@{8}: rebase (abort): returning to refs/heads/main
+[33md919d22[m HEAD@{9}: rebase (abort): returning to refs/heads/main
+[33md919d22[m HEAD@{10}: commit: added gi
+[33me0ee80b[m HEAD@{11}: commit: Added registration with backend
+[33m4f90965[m HEAD@{12}: commit (merge): project setup
+[33mcc1de22[m HEAD@{13}: Branch: renamed refs/heads/master to refs/heads/main
+[33mcc1de22[m HEAD@{15}: commit (initial): Initital project setup
