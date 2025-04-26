@@ -6,7 +6,7 @@ import jwt from "jsonwebtoken"
 import cookieParser from "cookie-parser";
 import cors from "cors";
 import bcrypt from "bcrypt";
-import { User } from "./Models/User.js";
+import { User } from "./Models/user.js";
 dotenv.config();
 
 const app = express();
