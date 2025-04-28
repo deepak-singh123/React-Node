@@ -37,7 +37,7 @@ function App() {
   return (
     <>
       {Object.keys(userdata).length === 0 ? (
-        <p>Loading...</p>  
+        <p>Loading... Please wait atleat 1 minute</p>  
       ) : (
         <Router>
           <Routes>
